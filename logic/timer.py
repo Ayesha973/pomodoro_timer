@@ -25,7 +25,11 @@ class PomodoroTimer:
             self.on_finish()
 
     def pause(self):
-        self.running = False
+        if self.running != False:
+            self.running = False
+        else:
+            self.running = True
+        
 
     def reset(self):
         self.running = False
